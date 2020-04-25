@@ -1,0 +1,5 @@
+- name: Copy add_vm.ps1
+  win_copy:
+    src: add_vm.ps1
+    dest: "{{ script_root }}"
+    remote_src: no
