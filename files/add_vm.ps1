@@ -5,11 +5,20 @@
 ####Created 2020/27/04####
 
 #Declare Switch Paramaters#
-param([string]$vmName = "DefaultVMName",[string]$vmPath = "C:\ProgramData\Microsoft\Windows\Hyper-V\",[int16]$vmGen = 2,[string]$memStart = "1GB",[string]$vmSwitch = "vmvirtualswitch",[string]$vmSwitchName = "AutoVM Network Adapter 1",
-[string]$vmHDDName = "HDD.vhdx",[string]$vmOSName = "OS.vhdx",[string]$prebVHDX = "test")
+param(
+  [string]$vmName = "DefaultVMName",
+  [string]$vmPath = "C:\ProgramData\Microsoft\Windows\Hyper-V\",
+  [int16]$vmGen = 2,
+  [string]$memStart = "1GB",
+  [string]$vmSwitch = "vmvirtualswitch",
+  [string]$vmSwitchName = "AutoVM Network Adapter 1",
+  [string]$vmHDDName = "HDD.vhdx",  
+  [string]$vmOSName = "OS.vhdx",
+  [string]$prebVHDX = "test"
+)
 ##End Declaration##
 
-##Add some logic to check if prebuilt vhdx exists or passed argument is not null since it is required.##
+## TODO: Add some logic to check if prebuilt vhdx exists or passed argument is not null since it is required.##
 
 ##Convert string to Expression##
 $memStart = Invoke-Expression $memStart
